@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<pr>
+    <meta>
+        <key>JOEL_MEI_2021_Teste_DAW</key>
+        <title>Teste - DAW</title>
+        <bdate>Janeiro 2021</bdate>
+        <edate>Janeiro 2021</edate>
+        <supervisor>José Carlos Ramalho</supervisor>
+    </meta>
+    <team>
+        <member id="PG42837">
+            <name>Joel Costa Carvalho</name>
+            <email>pg42837@alunos.uminho.pt</email>
+        </member>
+    </team>
+    <abstract>
+        <p>De forma a testar os meus conhecimentos obtidos durante a UC de Denvolvimento de Aplicações Web, foi-me proposto este teste que obriga-me a realizar dois exercícios.</p>
+        <p>
+            Para o primeiro exercício foi necessário realizar o tratamento/limpeza de um ficheiro <i>JSON</i> que servirá como base de dados:
+            <p> - Para a limpeza foi necessário: duplicar o campo ref e substituir as '/' por '_', acrescentar um campo pai com o nome do pai do indivíduo batizado e o campo mae com o nome da mae do indivíduo batizado, estes dois últimos consistiu numa duplicação do title e manter apenas o conteúdo necessário.</p>
+            Posto isto, carreguei o <i>JSON</i> para o mongo com o comando <i>mongoimport -d TesteDAW2020 -c batismos --jsonArray batismos.json</i> e iniciei o teste.
+        </p>
+        <p>O primeiro exercício consistui criar um servidor <i>nodejs</i> que dê suporte a uma API de dados com base no dataset disponibilizado e tratado anteriormente.</p>
+        <p>Este exercício, apenas constituido por 6 GET's e devolve listas de dados filtrados.</p>
+        <p>Para o segundo exercício em consumir uma API de dados disponível em <link>http://clav-api.di.uminho.pt/v2/docs/</link> que contém dados relativos à classificação e a avaliação de toda a documentação circulante na administração pública portuguesa.</p>
+        <p>Questões relacionadas com o aquecimento do exercício 2:</p>
+        <p> 
+            <b>1: Quantos processos (nível 3) e quais são (obtem uma lista em JSON; podes concatenar sublistas invocando várias queries), pertencentes à descendência da classe 900?</b> 
+            R: Registam-se cerca de 842 processos de nível 3, dos quais 21 pertencentes à descendência da classe 900.
+            <b>2: Quantas entidades estão catalogadas?</b> 
+            R: Estão catalogadas 19 entidades.
+            <b>3: Quantos processos (classes de nível 3) se encontram na descendência de 900.10?</b> 
+            R: Existem cerca de 8 descendências de 900.10
+            <b>4: Quantos processos (classes de nível 3) estão relacionados com 900.10.505?</b> 
+            R: Existem cerca de 6 processos relacionados com 900.10.505
+        </p>
+    </abstract>
+
+    <deriverables>
+        <link url="https://github.com/joelccarvalho/DAW2020/tree/master/T1">HTML e CSS: Gatos</link>
+        <link url="https://github.com/joelccarvalho/DAW2020/tree/master/T2">Project Record: DTD e XML</link>
+        <link url="https://github.com/joelccarvalho/DAW2020/tree/master/T3">XSLT</link>
+        <link url="https://github.com/joelccarvalho/DAW2020/tree/master/T4">Servidor Node.js</link>
+        <link url="https://github.com/joelccarvalho/DAW2020/tree/master/T5">Serviços Node.js e consumo de uma API</link>
+        <link url="https://github.com/joelccarvalho/DAW2020/tree/master/T6">Serviços Node.js e consumo de uma API - Gestão de Tarefa</link>
+        <link url="https://github.com/joelccarvalho/DAW2020/tree/master/T7">Express.js e Pug - Front e Back End</link>
+        <link url="https://github.com/joelccarvalho/DAW2020/tree/master/T8">Multi Upload - Multer</link>
+        <link url="https://github.com/joelccarvalho/DAW2020-Teste">Teste - DAW2021</link>
+    </deriverables>
+</pr>

@@ -1,0 +1,62 @@
+extends layout
+
+block content
+  .jumbotron.jumbotron-fluid
+    .container
+      h1.display-4 Ex2
+      p.lead
+        | Seja bem-vindo ao exercício número 2 do teste de DAW2020, 
+        b esta é a página da classe.
+  ul.list-group
+    li.list-group-item 
+      b Nível: 
+      | #{data.nivel} 
+    li.list-group-item 
+      b Código: 
+      | #{data.codigo} 
+    li.list-group-item 
+      b Título: 
+      | #{data.titulo} 
+    li.list-group-item 
+      b Descrição: 
+      | #{data.descricao}
+    if data.filhos.length > 0  
+      li.list-group-item 
+        p
+          a.btn.btn-primary(data-toggle='collapse' href='#myCollapse1' role='button' aria-expanded='false' aria-controls='myCollapse1' style='width:100%')
+            | Filhos
+        #myCollapse1.collapse
+          .card.card-body
+            each filho in data.filhos
+              p 
+                b Id: 
+                a(href=filho.id) #{filho.id}
+              p 
+                b Título: 
+                | #{filho.titulo}
+              p 
+                b Link: 
+                a(href='/classes/' + filho.codigo) #{filho.codigo} 
+              p 
+                b Status: 
+                | #{filho.status}
+              hr
+    if data.nivel == 3
+      if data.termosInd.length > 0
+        li.list-group-item
+          p
+            a.btn.btn-primary(data-toggle='collapse' href='#myCollapse2' role='button' aria-expanded='false' aria-controls='myCollapse2' style='width:100%')
+              | Termos de Índice
+          #myCollapse2.collapse
+              .card.card-body
+                each ti in data.termosInd
+                  p
+                    b ID: 
+                      a(href=ti.idTI) #{ti.idTI}  
+                  p
+                    b Termo: 
+                      a(href='/termosIndice#' + ti.termo) #{ti.termo} 
+                  hr
+    p(style='text-align: center; padding-top: 10px;') 
+      a.btn.btn-secondary(href='/') Voltar à Página Inicial
+      a.btn.btn-info(href='javascript:history.back()') Anterior

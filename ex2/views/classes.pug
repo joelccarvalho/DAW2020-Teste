@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  .jumbotron.jumbotron-fluid
+    .container
+      h1.display-4 Ex2
+      p.lead
+        | Seja Bem-Vindo à página das classes!!
+  table.table.table-striped
+    thead
+      tr
+        th(scope='col') Código
+        th(scope='col') Título
+    tbody
+      each d in data
+        tr
+          th(scope='row') 
+            a(href='/classes/' + d.codigo) #{d.codigo} 
+          td 
+            a(href='/classes/' + d.codigo) #{d.titulo}
+  p(style='text-align: center; padding-top: 10px;') 
+    a.btn.btn-secondary(href='/') Voltar à Página Inicial
+    a.btn.btn-info(href='javascript:history.back()') Anterior
